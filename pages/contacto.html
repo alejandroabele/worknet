@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Worknet</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html"> Inicio </a></li>
+          <li><a href="./mensajes..html"> Mensajes </a></li>
+          <li><a href="./notificaciones.html"> Notificaciones </a></li>
+          <li><a href="./noticias.html"> Noticias </a></li>
+          <li><a href="./aplicaciones.html"> Aplicaciones </a></li>
+          <li><a href="#"> Contacto </a></li>
+        </ul>
+        <img src="../public/img/avatar.png" alt="Avatar" />
+      </nav>
+    </header>
+    <h1>Contacto</h1>
+    <form>
+      <!-- Agrego etiqueta 'p' para que cada campo del formulario tome la linea entera -->
+      <p>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" />
+      </p>
+      <p>
+        <label>Apellido:</label>
+        <input type="text" name="apellido" />
+      </p>
+      <p>
+        <label>E-mail:</label>
+        <input type="text" name="email" placeholder="example@dominio.com" />
+      </p>
+      <p>
+        <select name="estado_civil">
+          <option value="1" selected>soltero/a</option>
+          <option value="2">Casado/a</option>
+          <option value="3">Divorciado/a</option>
+          <option value="4">Viudo/a</option>
+        </select>
+      </p>
+      <p>
+        <label>¿Desea recibir notificaciones?</label>
+        <input type="checkbox" name="notificaciones" />
+      </p>
+      <p>
+        <textarea name="comentarios" placeholder="Comentarios"></textarea>
+      </p>
+      <p>
+        <button type="reset">Limpiar formulario</button>
+        <button type="submit">Enviar formulario</button>
+      </p>
+    </form>
+    <footer>Footer</footer>
+  </body>
+</html>

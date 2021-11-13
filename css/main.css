@@ -1,0 +1,287 @@
+/* IMPORTO MI FUENTE */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
+
+/* ----------------------------------------- ESTILOS A CLASES ------------------------------------------- */
+.section-left {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+.negrita {
+  font-weight: 800;
+}
+
+.section-main {
+}
+
+.section-main__mensajes {
+  padding: 20px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+
+.section-left__fondo {
+  height: 70px;
+  background: rgb(222, 230, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 230, 250, 1) 0%,
+    rgba(0, 76, 245, 1) 90%
+  );
+
+  border-radius: 20px 20px 0px 0px;
+}
+.section-left__img {
+  width: 100px;
+  position: relative;
+  bottom: 45px;
+  left: 2px;
+}
+.section-main__mensajes table {
+  margin: 0 auto;
+}
+/* Clase para aplicar a mis card */
+.card-border {
+  border: 1px solid #d5d8dc;
+  border-radius: 10px;
+}
+.section-main__mensajes table tbody td {
+  border: 1px solid #d5d8dc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.section-main__mensajes table thead tr {
+  text-align: left;
+}
+.section-main__mensajes table thead tr th {
+  border: 1px solid #d5d8dc;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.section-main__app {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+  background-color: white;
+  margin: 10px;
+}
+.section-main__app__item {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  background-color: #0b66c2;
+  height: 90px;
+  width: 90px;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 5px 5px 5px #d5d8dc;
+}
+
+.section-main__notificaciones {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+
+.section-main__notificaciones__item {
+  margin-top: 10px;
+}
+.section-main__notificaciones__time {
+  font-weight: 300;
+  font-size: 10px;
+}
+.section-right {
+}
+.section-right__article {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+.container {
+  display: grid; /* Aplico GRID */
+  grid-template-columns: 1fr 2fr 1fr; /* Declaro 3 columnas: la segunda es del doble de la primera y la tercera */
+  margin-top: 20px;
+}
+.group-section {
+  text-decoration: none;
+}
+
+.group-section ul li {
+  list-style: none;
+}
+.section-main__noticia {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+.section-main .section-main__create-noticia ul li {
+  display: inline-block;
+
+  margin-right: 10px;
+  font-weight: 700;
+  color: blue;
+}
+.section-main__create-noticia {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+.section-main__img-noticia {
+  width: 80%;
+}
+.redondeado {
+  border-radius: 5px;
+  height: 30px;
+  width: 100%;
+}
+.section_main__title_noticia {
+  text-align: center;
+}
+.img-profile {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.nav__img {
+  width: 30px;
+}
+.chats {
+  width: 300px;
+  border: 1px solid #d5d8dc;
+  padding: 10px;
+  background-color: white;
+  position: fixed;
+  right: 0px;
+  border-radius: 10px;
+  bottom: 0px;
+}
+.chats__title {
+  margin-left: 15px;
+  position: absolute;
+  top: 15px;
+}
+/* ----------------------------------------- ESTILOS A IDENTIFICADORES ------------------------------------------- */
+
+#my-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+#my-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+#my-subtitle__info {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+#my-subtitle__info span a {
+  text-decoration: none;
+  font-weight: 700;
+}
+/* ----------------------------------------- ESTILOS A ETIQUETAS ------------------------------------------- */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f3f2ef;
+}
+header {
+  position: sticky;
+  top: 0px;
+  border: 1px solid #d5d8dc;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+}
+nav {
+  height: 100%;
+  padding-right: 30px;
+
+  background-color: white;
+}
+/* Aplico flex a mi navbar con los items alineados al final del bloque */
+nav ul {
+  display: flex; /* Declaro que mi bloque sea flexible */
+  flex-wrap: wrap; /* Ajusto los bloques a mi bloque flexible sin salir del mismo, colocandolos abajo */
+  margin-top: 0px;
+  justify-content: flex-end; /* Alineacion al final */
+}
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #17202a;
+  font-size: large;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav ul li img {
+  width: 30px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Aplico la animacion cuando paso el puntero encima */
+.section-main__app__item:hover {
+  animation-name: rebote;
+  animation-duration: 1s; /* Duración de la animacion */
+  animation-timing-function: ease; /* Funcion de velocidad/Tiempo de la animacion */
+  animation-fill-mode: forwards; /* Al terminar la animacion mantiene el estado final */
+}
+/* ----------------------------------------- ANIMACIONES ------------------------------------------- */
+@keyframes rebote {
+  0% {
+    transform: translateY(10px);
+    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  }
+  25% {
+    transform: translateY(-10px);
+    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  }
+  50% {
+    transform: translateY(5px);
+    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  }
+  75% {
+    transform: translateY(-5px);
+    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    transform: translateY(2px);
+    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  }
+}
