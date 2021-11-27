@@ -28,7 +28,11 @@
 
 .section-left__fondo {
   height: 70px;
-  background: $color-gradient;
+  background: linear-gradient(
+    90deg,
+    rgba(222, 230, 250, 1) 0%,
+    rgba(0, 76, 245, 1) 90%
+  );
   border-radius: 20px 20px 0px 0px;
 }
 .section-left__img {
@@ -73,9 +77,8 @@
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 20px;
+  @extend .section;
   background-color: white;
-  margin: 10px;
 }
 .section-main__app__item {
   display: inline-block;
@@ -87,7 +90,7 @@
   background-color: $color-primary;
   height: 120px;
   width: 120px;
-  font-weight: 800;
+  font-weight: $text-bold + 100; // Agrego Operacion de suma
   text-align: center;
   box-shadow: 5px 5px 5px #d5d8dc;
 }
@@ -146,12 +149,12 @@
   background-color: white;
 }
 .section-main__img-noticia {
-  width: 80%;
+  width: $full-width - 20%; //Agrego operación
 }
 .redondeado {
   border-radius: 5px;
   height: 30px;
-  width: 100%;
+  width: $full-width;
 }
 .section_main__title_noticia {
   text-align: center;
