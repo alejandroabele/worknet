@@ -1,20 +1,27 @@
-@charset "UTF-8";
 /* IMPORTO MI FUENTE */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
-.section-left {
-  padding: 20px;
-  margin-top: 10px;
-  background-color: white;
+@import "variables/variables.scss";
+
+@mixin size-section($padding, $margin) {
+  padding: $padding;
+  margin-top: $margin;
 }
 
+.section {
+  @include size-section(20px, 10px);
+}
+.section-left {
+  @extend .section;
+
+  background-color: white;
+}
 .negrita {
   font-weight: 800;
 }
 
 .section-main__mensajes {
-  padding: 20px;
-  margin: 10px;
+  @extend .section;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: white;
@@ -22,11 +29,10 @@
 
 .section-left__fondo {
   height: 70px;
-  background: #dee6fa;
-  background: linear-gradient(90deg, #dee6fa 0%, #004cf5 90%);
+  background: rgb(222, 230, 250);
+  background: $color-gradient;
   border-radius: 20px 20px 0px 0px;
 }
-
 .section-left__img {
   width: 100px;
   position: relative;
@@ -35,27 +41,33 @@
 }
 
 .card-border {
-  border: 1px solid #d5d8dc;
+  border: $border;
   border-radius: 10px;
 }
+.section-main__mensajes table tbody td {
+  table {
+    margin: 0 auto;
 
-.section-main__mensajes table tbody td table {
-  margin: 0 auto;
-}
-.section-main__mensajes table tbody td table tbody td {
-  border: 1px solid #d5d8dc;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 10px;
-}
-.section-main__mensajes table tbody td table thead tr {
-  text-align: left;
-}
-.section-main__mensajes table tbody td table thead tr th {
-  border: 1px solid #d5d8dc;
-  padding-left: 20px;
-  padding-right: 10px;
+    tbody {
+      td {
+        border: $border;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+      }
+    }
+    thead {
+      tr {
+        text-align: left;
+        th {
+          border: $border;
+          padding-left: 20px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 .section-main__app {
@@ -67,7 +79,6 @@
   background-color: white;
   margin: 10px;
 }
-
 .section-main__app__item {
   display: inline-block;
   vertical-align: middle;
@@ -75,7 +86,7 @@
   padding: 10px;
   margin: 5px;
   color: white;
-  background-color: #0b66c2;
+  background-color: $color-primary;
   height: 120px;
   width: 120px;
   font-weight: 800;
@@ -84,74 +95,69 @@
 }
 
 .section-main__notificaciones {
-  padding: 20px;
-  margin: 10px;
+  @extend .section;
   background-color: white;
 }
 
 .section-right__article {
-  padding: 20px;
-  margin-top: 10px;
+  @extend .section;
   background-color: white;
 }
 
 .section-main__notificaciones__item {
   margin-top: 10px;
 }
-
 .section-main__notificaciones__time {
   font-weight: 300;
   font-size: 10px;
 }
-
 .container {
-  display: grid;
-  /* Aplico GRID */
-  grid-template-columns: 1fr 2fr 1fr;
-  /* Declaro 3 columnas: la segunda es del doble de la primera y la tercera */
+  display: grid; /* Aplico GRID */
+  grid-template-columns: 1fr 2fr 1fr; /* Declaro 3 columnas: la segunda es del doble de la primera y la tercera */
   margin-top: 20px;
 }
-
 .group-section {
   text-decoration: none;
-}
-.group-section ul li {
-  list-style: none;
+  ul {
+    li {
+      list-style: none;
+    }
+  }
 }
 
 .section-main__noticia {
-  padding: 20px;
-  margin: 10px;
+  @extend .section;
   background-color: white;
 }
+.section-main {
+  .section-main__create-noticia {
+    ul {
+      li {
+        display: inline-block;
 
-.section-main .section-main__create-noticia ul li {
-  display: inline-block;
-  margin-right: 10px;
-  font-weight: 700;
-  color: blue;
+        margin-right: 10px;
+        font-weight: $text-bold;
+        color: blue;
+      }
+    }
+  }
 }
 
 .section-main__create-noticia {
-  padding: 20px;
-  margin: 10px;
+  @extend .section;
   background-color: white;
 }
-
 .section-main__img-noticia {
   width: 80%;
 }
-
 .redondeado {
   border-radius: 5px;
   height: 30px;
   width: 100%;
 }
-
 .section_main__title_noticia {
   text-align: center;
 }
-
 .img-profile {
   border-radius: 50%;
   border: 2px solid white;
@@ -160,10 +166,9 @@
 .nav__img {
   width: 30px;
 }
-
 .chats {
   width: 300px;
-  border: 1px solid #d5d8dc;
+  border: $border;
   padding: 10px;
   background-color: white;
   position: fixed;
@@ -171,7 +176,6 @@
   border-radius: 10px;
   bottom: 0px;
 }
-
 .chats__title {
   margin-left: 15px;
   position: absolute;
@@ -182,11 +186,10 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: #f3f2ef;
 }
-
 header {
   position: sticky;
   top: 0px;
-  border: 1px solid #d5d8dc;
+  border: $border;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -196,45 +199,43 @@ header {
 nav {
   height: 100%;
   padding-right: 30px;
-  background-color: white;
-}
-nav ul {
-  display: flex;
-  /* Declaro que mi bloque sea flexible */
-  flex-wrap: wrap;
-  /* Ajusto los bloques a mi bloque flexible sin salir del mismo, colocandolos abajo */
-  margin-top: 0px;
-  justify-content: flex-end;
-}
-nav ul li {
-  list-style: none;
-}
-nav ul li a {
-  color: #17202a;
-  font-size: large;
-  text-decoration: none;
-  margin-left: 10px;
-}
-nav ul li img {
-  width: 30px;
-  text-decoration: none;
-}
 
+  background-color: white;
+  ul {
+    display: flex; /* Declaro que mi bloque sea flexible */
+    flex-wrap: wrap; /* Ajusto los bloques a mi bloque flexible sin salir del mismo, colocandolos abajo */
+    margin-top: 0px;
+    justify-content: flex-end;
+    li {
+      list-style: none;
+      a {
+        color: $color-link;
+        font-size: large;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      img {
+        width: 30px;
+        text-decoration: none;
+      }
+    }
+  }
+}
 footer {
   text-align: center;
-  font-weight: 700;
+  font-weight: $text-bold;
   padding: 10px;
   background-color: white;
 }
 
 #my-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: $text-bold;
   margin: 0;
   padding: 0;
   margin-top: 5px;
 }
-
 #my-subtitle {
   font-size: 18px;
   font-weight: 400;
@@ -242,32 +243,28 @@ footer {
   padding: 0;
   margin-top: 5px;
 }
-
 #my-subtitle__info {
   font-size: 12px;
   font-weight: 300;
   margin-top: 5px;
+  span {
+    a {
+      text-decoration: none;
+      font-weight: $text-bold;
+    }
+  }
 }
-#my-subtitle__info span a {
-  text-decoration: none;
-  font-weight: 700;
-}
-
 .nav_title {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: $text-bold;
 }
 
 .section-main__app__item:hover {
   animation-name: rebote;
-  animation-duration: 1s;
-  /* Duración de la animacion */
-  animation-timing-function: ease;
-  /* Funcion de velocidad/Tiempo de la animacion */
-  animation-fill-mode: forwards;
-  /* Al terminar la animacion mantiene el estado final */
+  animation-duration: 1s; /* Duración de la animacion */
+  animation-timing-function: ease; /* Funcion de velocidad/Tiempo de la animacion */
+  animation-fill-mode: forwards; /* Al terminar la animacion mantiene el estado final */
 }
-
 @keyframes rebote {
   0% {
     transform: translateY(10px);

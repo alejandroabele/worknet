@@ -1,15 +1,17 @@
-@charset "UTF-8";
 /* IMPORTO MI FUENTE */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
-.section-left {
+/* ----------------------------------------- ESTILOS A CLASES ------------------------------------------- */
+/* .section-left {
   padding: 20px;
   margin-top: 10px;
   background-color: white;
 }
-
 .negrita {
   font-weight: 800;
+}
+
+.section-main {
 }
 
 .section-main__mensajes {
@@ -22,43 +24,45 @@
 
 .section-left__fondo {
   height: 70px;
-  background: #dee6fa;
-  background: linear-gradient(90deg, #dee6fa 0%, #004cf5 90%);
+  background: rgb(222, 230, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 230, 250, 1) 0%,
+    rgba(0, 76, 245, 1) 90%
+  );
+
   border-radius: 20px 20px 0px 0px;
 }
-
 .section-left__img {
   width: 100px;
   position: relative;
   bottom: 45px;
   left: 2px;
-}
-
-.card-border {
+} */
+/* .section-main__mensajes table {
+  margin: 0 auto;
+} */
+/* Clase para aplicar a mis card */
+/* .card-border {
   border: 1px solid #d5d8dc;
   border-radius: 10px;
-}
-
-.section-main__mensajes table tbody td table {
-  margin: 0 auto;
-}
-.section-main__mensajes table tbody td table tbody td {
+} */
+/* .section-main__mensajes table tbody td {
   border: 1px solid #d5d8dc;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 10px;
 }
-.section-main__mensajes table tbody td table thead tr {
+.section-main__mensajes table thead tr {
   text-align: left;
 }
-.section-main__mensajes table tbody td table thead tr th {
+.section-main__mensajes table thead tr th {
   border: 1px solid #d5d8dc;
   padding-left: 20px;
   padding-right: 10px;
-}
-
-.section-main__app {
+} */
+/* .section-main__app {
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -67,7 +71,6 @@
   background-color: white;
   margin: 10px;
 }
-
 .section-main__app__item {
   display: inline-block;
   vertical-align: middle;
@@ -87,71 +90,62 @@
   padding: 20px;
   margin: 10px;
   background-color: white;
-}
+} */
 
-.section-right__article {
-  padding: 20px;
-  margin-top: 10px;
-  background-color: white;
-}
-
-.section-main__notificaciones__item {
+/* .section-main__notificaciones__item {
   margin-top: 10px;
 }
-
 .section-main__notificaciones__time {
   font-weight: 300;
   font-size: 10px;
+} */
+.section-right {
 }
-
-.container {
-  display: grid;
-  /* Aplico GRID */
-  grid-template-columns: 1fr 2fr 1fr;
-  /* Declaro 3 columnas: la segunda es del doble de la primera y la tercera */
+/* .section-right__article {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: white;
+} */
+/* .container {
+  display: grid; 
+  grid-template-columns: 1fr 2fr 1fr; 
   margin-top: 20px;
-}
-
-.group-section {
+} */
+/* .group-section {
   text-decoration: none;
 }
+
 .group-section ul li {
   list-style: none;
 }
-
 .section-main__noticia {
   padding: 20px;
   margin: 10px;
   background-color: white;
 }
-
 .section-main .section-main__create-noticia ul li {
   display: inline-block;
+
   margin-right: 10px;
   font-weight: 700;
   color: blue;
-}
-
-.section-main__create-noticia {
+} */
+/* .section-main__create-noticia {
   padding: 20px;
   margin: 10px;
   background-color: white;
 }
-
 .section-main__img-noticia {
   width: 80%;
 }
-
 .redondeado {
   border-radius: 5px;
   height: 30px;
   width: 100%;
 }
-
 .section_main__title_noticia {
   text-align: center;
 }
-
 .img-profile {
   border-radius: 50%;
   border: 2px solid white;
@@ -160,7 +154,6 @@
 .nav__img {
   width: 30px;
 }
-
 .chats {
   width: 300px;
   border: 1px solid #d5d8dc;
@@ -171,70 +164,20 @@
   border-radius: 10px;
   bottom: 0px;
 }
-
 .chats__title {
   margin-left: 15px;
   position: absolute;
   top: 15px;
-}
+} */
+/* ----------------------------------------- ESTILOS A IDENTIFICADORES ------------------------------------------- */
 
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #f3f2ef;
-}
-
-header {
-  position: sticky;
-  top: 0px;
-  border: 1px solid #d5d8dc;
-  padding: 10px;
-  background-color: white;
-  border-radius: 10px;
-  z-index: 10;
-}
-
-nav {
-  height: 100%;
-  padding-right: 30px;
-  background-color: white;
-}
-nav ul {
-  display: flex;
-  /* Declaro que mi bloque sea flexible */
-  flex-wrap: wrap;
-  /* Ajusto los bloques a mi bloque flexible sin salir del mismo, colocandolos abajo */
-  margin-top: 0px;
-  justify-content: flex-end;
-}
-nav ul li {
-  list-style: none;
-}
-nav ul li a {
-  color: #17202a;
-  font-size: large;
-  text-decoration: none;
-  margin-left: 10px;
-}
-nav ul li img {
-  width: 30px;
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  font-weight: 700;
-  padding: 10px;
-  background-color: white;
-}
-
-#my-title {
+/* #my-title {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
   padding: 0;
   margin-top: 5px;
 }
-
 #my-subtitle {
   font-size: 18px;
   font-weight: 400;
@@ -242,7 +185,6 @@ footer {
   padding: 0;
   margin-top: 5px;
 }
-
 #my-subtitle__info {
   font-size: 12px;
   font-weight: 300;
@@ -252,23 +194,70 @@ footer {
   text-decoration: none;
   font-weight: 700;
 }
-
 .nav_title {
   text-decoration: none;
   font-weight: 700;
+  
+} */
+/* ----------------------------------------- ESTILOS A ETIQUETAS ------------------------------------------- */
+
+/* body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f3f2ef;
+}
+header {
+  position: sticky;
+  top: 0px;
+  border: 1px solid #d5d8dc;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+} */
+/* nav {
+  height: 100%;
+  padding-right: 30px;
+
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-top: 0px;
+  justify-content: flex-end; 
+}
+nav ul li {
+  list-style: none;
 }
 
-.section-main__app__item:hover {
+nav ul li a {
+  color: #17202a;
+  font-size: large;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav ul li img {
+  width: 30px;
+  text-decoration: none;
+}
+
+ */ /* footer {
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  background-color: white;
+} */
+
+/* Aplico la animacion cuando paso el puntero encima */
+/* .section-main__app__item:hover {
   animation-name: rebote;
-  animation-duration: 1s;
-  /* Duración de la animacion */
-  animation-timing-function: ease;
-  /* Funcion de velocidad/Tiempo de la animacion */
-  animation-fill-mode: forwards;
-  /* Al terminar la animacion mantiene el estado final */
-}
-
-@keyframes rebote {
+  animation-duration: 1s; /* Duración de la animacion */
+/* animation-timing-function: ease;  */ /* Funcion de velocidad/Tiempo de la animacion */
+/*  animation-fill-mode: forwards; */ /* Al terminar la animacion mantiene el estado final */
+/* } */
+/* ----------------------------------------- ANIMACIONES ------------------------------------------- */
+/* @keyframes rebote {
   0% {
     transform: translateY(10px);
     box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
@@ -299,4 +288,4 @@ footer {
     -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
   }
-}
+} */
