@@ -35,13 +35,13 @@
   );
   border-radius: 20px 20px 0px 0px;
 }
+
 .section-left__img {
   width: 100px;
   position: relative;
   bottom: 45px;
   left: 2px;
 }
-
 .card-border {
   border: $border;
   border-radius: 10px;
@@ -260,41 +260,32 @@ footer {
   font-weight: $text-bold;
 }
 
+.shadow {
+  box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+}
 .section-main__app__item:hover {
+  @extend .shadow;
   animation-name: rebote;
   animation-duration: 1s; /* Duración de la animacion */
   animation-timing-function: ease; /* Funcion de velocidad/Tiempo de la animacion */
   animation-fill-mode: forwards; /* Al terminar la animacion mantiene el estado final */
 }
+
+/* Utilizo Each para armar animación */
+$frames: (
+  0%: 10px,
+  25%: -10px,
+  50%: 5px,
+  75%: -5px,
+  100%: 2px,
+);
+
 @keyframes rebote {
-  0% {
-    transform: translateY(10px);
-    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-  }
-  25% {
-    transform: translateY(-10px);
-    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-  }
-  50% {
-    transform: translateY(5px);
-    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-  }
-  75% {
-    transform: translateY(-5px);
-    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-  }
-  100% {
-    transform: translateY(2px);
-    box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 15px 41px -10px rgba(0, 0, 0, 0.75);
+  @each $state, $value in $frames {
+    #{$state} {
+      transform: translateY($value);
+    }
   }
 }
