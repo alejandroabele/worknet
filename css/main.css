@@ -2,7 +2,7 @@
 /* IMPORTO MI FUENTE */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
-.section, .section-left, .section-main__mensajes, .section-main__app, .section-main__notificaciones, .section-right__article, .section-main__noticia, .section-main__create-noticia {
+.section, .section-left, .section-main__mensajes, .card-border__title, .section-main__app, .section-main__notificaciones, .section-right__article, .section-main__noticia, .section-main__create-noticia {
   padding: 20px;
   margin-top: 10px; }
 
@@ -28,9 +28,12 @@
   bottom: 45px;
   left: 2px; }
 
-.card-border {
+.card-border, .card-border__title {
   border: 1px solid #d5d8dc;
   border-radius: 10px; }
+
+.card-border__title {
+  background-color: white; }
 
 .section-main__mensajes table tbody td table {
   margin: 0 auto; }

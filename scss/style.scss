@@ -46,6 +46,12 @@
   border: $border;
   border-radius: 10px;
 }
+
+.card-border__title {
+  @extend .section;
+  @extend .card-border;
+  background-color: white;
+}
 .section-main__mensajes table tbody td {
   table {
     margin: 0 auto;
